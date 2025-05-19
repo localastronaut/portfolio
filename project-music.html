@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>PerDiem</title>
+
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+    .video-container {
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+        aspect-ratio: 16 / 9;
+        margin: 0 auto 40px;
+        overflow: hidden;
+    }
+
+    .video-container iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    </style>
+</head>
+
+<body class="container-fluid pixies_works_inside_page">
+    <header class="pixies_header logo_left pixies_sticky_header_on">
+        <div class="container header_fw">
+            <div class="row">
+                <div class="col-md-12 pixies_def_header ">
+                    <div class="pixies_logo_cont">
+                        <a href="index.html" class="pixies_image_logo">
+                            <img class="logotype" src="img/logo.png" alt="">
+                            <img class="logotype-retina" src="img/logo-retina.png" alt="">
+                        </a>
+                    </div>
+                    <nav class="pixies_menu_cont">
+                        <div class="menu-main-menu-container">
+                            <ul id="menu-main-menu" class="pixies_menu">
+                                <li class="menu-item"><a href="about.html">About</a></li>
+                                <li class="menu-item"><a href="projects.html">Projects</a></li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                    </nav>
+                </div>
+                <div class="mobile_header col-md-12">
+                    <a href="#" class="pixies_image_logo"><img src="img/logo.png" alt=""></a>
+                    <a href="javascript:void(0)" class="btn_mobile_menu">
+						<span class="pixies_menu_line1"></span>
+						<span class="pixies_menu_line2"></span>
+						<span class="pixies_menu_line3"></span>
+					</a>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <div id="pixies_post12" class="container-fluid pixies_blog_listing pixies_blog_post pixies_works_inside">
+        <div class=" pixies_main">
+            <img src="">
+            <div class="container ">
+                <section class="row">
+
+                    <div class="pixies_post_block">
+                        <ul>
+                            <li>2018</li>
+                            <li>UX + Branding + Design</li>
+                        </ul>
+                        <h1>Crystal Nights</h1>
+                        <p class="pixies_text">The Crystal Nights synth is a playable sound sculpture—part digital instrument, part interactive art piece. It invites users to explore ambient textures and lo-fi tones using a customizable, analog-inspired interface.</p>
+                        <br/>
+                        <div class="video-container" style="aspect-ratio: auto; height: auto;">
+                          <h2 style="text-align: center;">AFTER HOURS SYNTH</h2>
+                          <div id="synth-wrapper">
+                            <div id="keyboard">
+                              <!-- White keys -->
+                              <div class="white-key" data-note="C4"></div>
+                              <div class="white-key" data-note="D4"></div>
+                              <div class="white-key" data-note="E4"></div>
+                              <div class="white-key" data-note="F4"></div>
+                              <div class="white-key" data-note="G4"></div>
+                              <div class="white-key" data-note="A4"></div>
+                              <div class="white-key" data-note="B4"></div>
+                              <div class="white-key" data-note="C5"></div>
+
+                              <!-- Black keys -->
+                              <div class="black-key" data-note="C#4" style="left: 45px;"></div>
+                              <div class="black-key" data-note="D#4" style="left: 105px;"></div>
+                              <div class="black-key" data-note="F#4" style="left: 225px;"></div>
+                              <div class="black-key" data-note="G#4" style="left: 285px;"></div>
+                              <div class="black-key" data-note="A#4" style="left: 345px;"></div>
+                            </div>
+                          </div>
+
+<div style="color: white; text-align: center; margin-top: 30px;">
+  <label for="oscillator">Oscillator Type:</label>
+  <select id="oscillator">
+    <option value="sine">Sine</option>
+    <option value="triangle">Triangle</option>
+    <option value="square">Square</option>
+    <option value="sawtooth">Sawtooth</option>
+    <option value="amtriangle" selected>AM Triangle</option>
+  </select>
+
+  <br><br>
+
+  <label for="attack">Attack:</label>
+  <input type="range" id="attack" min="0" max="20" step="0.1" value="15.05">
+
+  <label for="decay">Decay:</label>
+  <input type="range" id="decay" min="0" max="5" step="0.1" value="0.2">
+
+  <label for="sustain">Sustain:</label>
+  <input type="range" id="sustain" min="0" max="1" step="0.05" value="0.2">
+
+  <label for="release">Release:</label>
+  <input type="range" id="release" min="0" max="10" step="0.1" value="1.5">
+
+  <label for="volume">Volume:</label>
+  <input type="range" id="volume" min="-60" max="0" step="1" value="0">
+</div>
+
+                          <style>
+                            #synth-wrapper {
+                              display: flex;
+                              justify-content: center;
+                              padding: 40px;
+                              background: #222;
+                              border-radius: 12px;
+                              max-width: 1000px;
+                              margin: 0 auto;
+                              box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+                              position: relative;
+                            }
+
+                            #keyboard {
+                              position: relative;
+                              display: flex;
+                              height: 240px;
+                            }
+
+                            .white-key {
+                              width: 60px;
+                              height: 100%;
+                              background: #fff;
+                              border: 1px solid #ccc;
+                              box-sizing: border-box;
+                              position: relative;
+                              z-index: 1;
+                            }
+
+                            .white-key:active {
+                              background: #ddd;
+                            }
+
+                            .black-key {
+                              width: 40px;
+                              height: 160px;
+                              background: #000;
+                              position: absolute;
+                              z-index: 2;
+                            }
+
+                            .black-key:active {
+                              background: #444;
+                            }
+
+                            .white-key.active, .white-key:active {
+                              background: #ccc !important;
+                            }
+
+                            .black-key.active, .black-key:active {
+                              background: #666 !important;
+                            }
+                          </style>
+
+                          <script src="https://unpkg.com/tone"></script>
+                          <script>
+                            const synth = new Tone.Synth({
+                              volume: 0,
+                              detune: 0,
+                              portamento: 0.05,
+                              envelope: {
+                                attack: 15.05,
+                                attackCurve: "exponential",
+                                decay: 0.2,
+                                decayCurve: "exponential",
+                                release: 1.5,
+                                releaseCurve: "exponential",
+                                sustain: 0.2
+                              },
+                              oscillator: {
+                                type: "amtriangle",
+                                partialCount: 0,
+                                partials: [],
+                                phase: 0,
+                                harmonicity: 0.5,
+                                modulationType: "sine"
+                              }
+                            }).toDestination();
+
+                            const reverb = new Tone.Reverb({ decay: 3, wet: 0.3 }).toDestination();
+                            const delay = new Tone.FeedbackDelay("8n", 0.4).toDestination();
+
+                            synth.connect(delay);
+                            delay.connect(reverb);
+
+                            document.querySelectorAll('.white-key, .black-key').forEach(key => {
+                              key.addEventListener('mousedown', () => {
+                                Tone.start();
+                                const note = key.dataset.note;
+                                synth.triggerAttackRelease(note, "8n");
+                              });
+                            });
+
+                            const noteMap = {
+                              'a': 'C4', 's': 'D4', 'd': 'E4', 'f': 'F4',
+                              'g': 'G4', 'h': 'A4', 'j': 'B4', 'k': 'C5',
+                              'w': 'C#4', 'e': 'D#4', 't': 'F#4',
+                              'y': 'G#4', 'u': 'A#4'
+                            };
+
+                            document.addEventListener('keydown', (e) => {
+                              const note = noteMap[e.key];
+                              if (note) {
+                                Tone.start();
+                                synth.triggerAttackRelease(note, "8n");
+                                const el = document.querySelector(`[data-note="${note}"]`);
+                                if (el) {
+                                  el.classList.add('active');
+                                  setTimeout(() => el.classList.remove('active'), 100);
+                                }
+                              }
+                            });
+
+                            // Real-time synth controls
+                            document.getElementById('oscillator').addEventListener('change', e => {
+                              synth.oscillator.type = e.target.value;
+                            });
+
+                            document.getElementById('attack').addEventListener('input', e => {
+                              synth.envelope.attack = parseFloat(e.target.value);
+                            });
+
+                            document.getElementById('decay').addEventListener('input', e => {
+                              synth.envelope.decay = parseFloat(e.target.value);
+                            });
+
+                            document.getElementById('sustain').addEventListener('input', e => {
+                              synth.envelope.sustain = parseFloat(e.target.value);
+                            });
+
+                            document.getElementById('release').addEventListener('input', e => {
+                              synth.envelope.release = parseFloat(e.target.value);
+                            });
+
+                            document.getElementById('volume').addEventListener('input', e => {
+                              synth.volume.value = parseFloat(e.target.value);
+                            });
+                          </script>
+                        </div>
+                        <br/>
+                        <p class="pixies_text_italic">
+                            Use your computer's keyboard to play the sounds
+                        </p>
+                        <p class="pixies_text">
+                          Synthesizers carry a certain nostalgia—evoking memories of analog recordings, cinematic soundtracks, and lo-fi experiments from a pre-digital era. The Crystal Nights synth embraces this spirit, letting you explore sound as texture, memory, and motion.
+                        </p>
+                        <br/>
+                        <p class="pixies_text"><strong>Settings Overview:</strong></p>
+                        <ul class="pixies_text">
+                          <li><strong>Oscillator Type:</strong> Changes the basic shape of the sound wave—like sine for soft tones or square for sharper, digital-like edges.</li>
+                          <li><strong>Attack:</strong> Controls how quickly the sound reaches full volume after a key is pressed—longer attack feels like a fade-in.</li>
+                          <li><strong>Decay:</strong> Sets how fast the sound drops after the initial peak—used to shape the dynamics.</li>
+                          <li><strong>Sustain:</strong> Adjusts the level the sound holds while the key is held—low values give a pluck-like quality.</li>
+                          <li><strong>Release:</strong> Determines how long the sound lingers after a key is released—high values give more ambient trails.</li>
+                          <li><strong>Volume:</strong> Overall loudness of the synth output—set to balance with your headphones or speakers.</li>
+                        </ul>
+                        <br/>
+                        <br/>
+                    </div>
+				</section>
+
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+    <footer class="container-fluid">
+
+		<ul class="pixies_footer_contact">
+			<li><small></small></li>
+		</ul>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/libs.min.js"></script>
+	<script src="js/common.js"></script>
+</body>
+</html>
