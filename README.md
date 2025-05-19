@@ -2,7 +2,7 @@
 
 This repository contains a collection of web development projects. Each project showcases various aspects of web development, including design, interactivity, and responsiveness.
 
-https://localastronaut.github.io/Portfolio/
+https://localastronaut.github.io/portfolio/
 
 ## Overview of Projects
 
