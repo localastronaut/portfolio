@@ -1,41 +1,33 @@
 # Web Development Portfolio
 
-This repository hosts Brandon Nelson's portfolio showcasing creative design and technical web projects. Each project highlights different skills ranging from branding and user experience to interactive web development.
+This repository contains a collection of web development projects. Each project showcases various aspects of web development, including design, interactivity, and responsiveness.
 
-View the live site at: [https://localastronaut.github.io/portfolio/](https://localastronaut.github.io/portfolio/)
+https://localastronaut.github.io/portfolio/
 
 ## Overview of Projects
 
-- **ExCollectives**: AI‑driven health assistant exploring conversational user interfaces. Built with HTML, CSS and JavaScript with prototypes in React Native.
-- **The Factory**: Collaboration hub for sustainable and medical side projects. Included a custom platform for sharing ideas and physical product designs.
-- **PerDiem**: Crowdfunding platform allowing fans to invest directly in artists. Developed as a full stack web application with custom branding.
-- **Red Bull**: Internal collaboration tools and marketing design work for global Red Bull teams.
-- **Red Bull Records**: Branding, website concepts and marketing collateral for the music label.
-- **SelfCare**: Mobile app concepts for tracking symptoms and drug information, designed with iOS frameworks.
-- **Crystal Nights**: Interactive web synthesizer demonstrating Web Audio API usage.
-
-## Technical Projects
-
-Source code for all projects is available in this repository. Clone the repo and open any `project-*.html` file in your browser to explore the implementations.
-
-```bash
-git clone https://github.com/localastronaut/portfolio.git
-```
+- **ExCollectives**: (Description of the project, what it does, technologies used)
+- **Factory**: (Description of the project, what it does, technologies used)
+- **PerDiem**: (Description of the project, what it does, technologies used)
+- **Redbull**: (Description of the project, what it does, technologies used)
+- **Redbull Records**: (Description of the project, what it does, technologies used)
+- **SelfCare**: (Description of the project, what it does, technologies used)
 
 ## How to View
 
-Each project is contained in its own HTML file. To view a project locally, open the corresponding HTML file in a web browser. The site is fully static, so no build step is required.
+Each project is contained in its own HTML file. To view a project, open the corresponding HTML file in a web browser.
 
 ## Technologies Used
 
-- HTML5 & CSS3
-- JavaScript (ES6)
+- HTML
+- CSS
+- JavaScript
 
 ## Future Work
 
-- Expand project pages with more interactive demos.
-- Continue refining responsive layouts and accessibility.
+- Add more projects to showcase additional aspects of web development.
+- Improve the existing projects, e.g., by adding more interactivity or improving the design.
 
 ## Contact Information
 
-For inquiries, reach out to Brandon at [hello@localastronaut.com](mailto:hello@localastronaut.com).
+For any queries, please reach out at (your email address).
