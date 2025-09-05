@@ -1,33 +1,38 @@
-# Web Development Portfolio
+# Portfolio Website
 
-This repository contains a collection of web development projects. Each project showcases various aspects of web development, including design, interactivity, and responsiveness.
+Static portfolio site with individual project case studies and a lightweight asset pipeline.
 
-https://localastronaut.github.io/portfolio/
+Live site: https://localastronaut.github.io/portfolio/
 
-## Overview of Projects
+## Structure
 
-- **ExCollectives**: (Description of the project, what it does, technologies used)
-- **Factory**: (Description of the project, what it does, technologies used)
-- **PerDiem**: (Description of the project, what it does, technologies used)
-- **Redbull**: (Description of the project, what it does, technologies used)
-- **Redbull Records**: (Description of the project, what it does, technologies used)
-- **SelfCare**: (Description of the project, what it does, technologies used)
+- `index.html`: Landing page
+- `about.html`: About page
+- `projects.html`: Filterable projects listing
+- `projects/`: Individual project pages (moved here for organization)
+  - `project-*.html`
+- `css/`, `js/`, `img/`, `fonts/`: Static assets
+- `.gitignore`: Basic ignores for OS files and logs
 
-## How to View
+## Local Development
 
-Each project is contained in its own HTML file. To view a project, open the corresponding HTML file in a web browser.
+Open `index.html` directly in a browser, or serve locally for cleaner routing and CORS behavior:
 
-## Technologies Used
+Python 3: `python3 -m http.server 8000`
 
-- HTML
-- CSS
-- JavaScript
+Then visit `http://localhost:8000`.
 
-## Future Work
+## Notes
 
-- Add more projects to showcase additional aspects of web development.
-- Improve the existing projects, e.g., by adding more interactivity or improving the design.
+- Project pages are under `projects/` and all internal links updated.
+- Static assets live under `assets/` (`css/`, `js/`, `img/`, `fonts/`).
+- Added `assets/favicon.png` referenced across all pages.
+- Added `sitemap.xml` and `robots.txt` for SEO.
 
-## Contact Information
+## Tech
 
-For any queries, please reach out at (your email address).
+- HTML, CSS, JavaScript (no build step required)
+
+## Contributions / Contact
+
+Open issues or reach out if you want help extending the site.
