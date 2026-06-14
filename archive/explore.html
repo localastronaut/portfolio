@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Design Explorations — Workshop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Mulish:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: #e9e9e6; color: #222; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 28px 18px 80px; line-height: 1.5; }
+        .page-head { max-width: 920px; margin: 0 auto 26px; }
+        .page-head h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.01em; }
+        .page-head p { color: #555; margin-top: 6px; font-size: 0.95rem; }
+        .label { max-width: 920px; margin: 30px auto 10px; display: flex; align-items: baseline; gap: 10px; }
+        .label .n { background: #222; color: #fff; font-weight: 700; font-size: 0.72rem; padding: 3px 9px; border-radius: 20px; letter-spacing: 0.04em; }
+        .label .t { font-weight: 700; font-size: 0.95rem; }
+        .label .d { color: #777; font-size: 0.85rem; }
+        .sample { max-width: 920px; margin: 0 auto; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 0 rgba(0,0,0,0.06), 0 18px 40px -24px rgba(0,0,0,0.4); }
+        .sbar { display: flex; align-items: baseline; justify-content: space-between; padding: 18px 30px; border-bottom: 1px solid; }
+        .sbody { padding: 44px 30px 46px; }
+        .sbody .eyebrow { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; margin-bottom: 18px; display: inline-flex; align-items: center; gap: 11px; }
+        .sbody .eyebrow::before { content: ""; width: 24px; height: 1px; display: inline-block; }
+        .sbody h2 { font-size: clamp(2.1rem, 4.4vw, 3.3rem); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 18px; }
+        .sbody .lede { font-size: 1.12rem; line-height: 1.6; max-width: 54ch; margin-bottom: 26px; }
+        .srow { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 22px; }
+        .btn { display: inline-flex; align-items: center; gap: 9px; font-weight: 700; font-size: 0.9rem; padding: 13px 22px; border-radius: 3px; text-decoration: none; }
+        .btn::after { content: "→"; }
+        .card { font-size: 0.9rem; padding: 14px 18px; border-radius: 8px; border: 1px solid; max-width: 320px; }
+        .card b { display: block; font-size: 1.05rem; margin-bottom: 4px; }
+
+        /* ---------- 1 · Fraunces (current) ---------- */
+        .s1 { background: #F4EFE6; }
+        .s1 .sbar { border-color: #D8CDBA; }
+        .s1 .wm { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.3rem; color: #2A2520; }
+        .s1 .nav { font-family: 'Mulish'; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: #4A4138; }
+        .s1 .eyebrow { font-family: 'Mulish'; color: #B5482E; }
+        .s1 .eyebrow::before { background: #B5482E; }
+        .s1 h2 { font-family: 'Fraunces', serif; font-weight: 600; color: #2A2520; }
+        .s1 h2 em { font-style: italic; font-weight: 500; color: #B5482E; }
+        .s1 .lede { font-family: 'Mulish'; color: #4A4138; }
+        .s1 .btn { background: #B5482E; color: #F4EFE6; font-family: 'Mulish'; }
+        .s1 .card { font-family: 'Mulish'; background: #FBF8F1; border-color: #E4DAC8; color: #4A4138; }
+        .s1 .card b { font-family: 'Fraunces', serif; color: #2A2520; }
+
+        /* ---------- 2 · Newsreader (bookish serif) ---------- */
+        .s2 { background: #F4EFE6; }
+        .s2 .sbar { border-color: #D8CDBA; }
+        .s2 .wm { font-family: 'Newsreader', serif; font-weight: 600; font-size: 1.42rem; color: #2A2520; }
+        .s2 .nav { font-family: 'Mulish'; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: #4A4138; }
+        .s2 .eyebrow { font-family: 'Mulish'; color: #B5482E; }
+        .s2 .eyebrow::before { background: #B5482E; }
+        .s2 h2 { font-family: 'Newsreader', serif; font-weight: 500; color: #2A2520; letter-spacing: -0.01em; }
+        .s2 h2 em { font-style: italic; font-weight: 500; color: #B5482E; }
+        .s2 .lede { font-family: 'Mulish'; color: #4A4138; }
+        .s2 .btn { background: #B5482E; color: #F4EFE6; font-family: 'Mulish'; }
+        .s2 .card { font-family: 'Mulish'; background: #FBF8F1; border-color: #E4DAC8; color: #4A4138; }
+        .s2 .card b { font-family: 'Newsreader', serif; font-weight: 600; color: #2A2520; }
+
+        /* ---------- 3 · Spectral (refined literary serif) ---------- */
+        .s3 { background: #F3EEE7; }
+        .s3 .sbar { border-color: #D9CFC0; }
+        .s3 .wm { font-family: 'Spectral', serif; font-weight: 600; font-size: 1.34rem; color: #26211C; }
+        .s3 .nav { font-family: 'Inter'; font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: #463f37; }
+        .s3 .eyebrow { font-family: 'Inter'; color: #9A5B2E; }
+        .s3 .eyebrow::before { background: #9A5B2E; }
+        .s3 h2 { font-family: 'Spectral', serif; font-weight: 500; color: #26211C; }
+        .s3 h2 em { font-style: italic; font-weight: 500; color: #9A5B2E; }
+        .s3 .lede { font-family: 'Inter'; color: #463f37; }
+        .s3 .btn { background: #26211C; color: #F3EEE7; font-family: 'Inter'; }
+        .s3 .card { font-family: 'Inter'; background: #FAF6EF; border-color: #E5DBCB; color: #463f37; }
+        .s3 .card b { font-family: 'Spectral', serif; font-weight: 600; color: #26211C; }
+
+        /* ---------- 4 · Clean Modern Workshop ---------- */
+        .s4 { background: #FAFAF7; }
+        .s4 .sbar { border-color: #E4E4DD; }
+        .s4 .wm { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.24rem; color: #14140F; letter-spacing: -0.01em; }
+        .s4 .nav { font-family: 'Inter'; font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: #444; }
+        .s4 .eyebrow { font-family: 'Inter'; color: #2B59FF; }
+        .s4 .eyebrow::before { background: #2B59FF; }
+        .s4 h2 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: #14140F; letter-spacing: -0.03em; }
+        .s4 h2 em { font-style: normal; color: #2B59FF; }
+        .s4 .lede { font-family: 'Inter'; color: #3b3b34; }
+        .s4 .btn { background: #2B59FF; color: #fff; font-family: 'Inter'; border-radius: 6px; }
+        .s4 .card { font-family: 'Inter'; background: #fff; border-color: #E4E4DD; color: #3b3b34; border-radius: 10px; }
+        .s4 .card b { font-family: 'Space Grotesk', sans-serif; color: #14140F; }
+
+        /* ---------- 5 · Cosmic / Local Astronaut ---------- */
+        .s5 { background: #06080F; }
+        .s5 .sbar { border-color: #1b2333; }
+        .s5 .wm { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1.26rem; color: #E8ECF5; }
+        .s5 .nav { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.12em; color: #8794ad; }
+        .s5 .eyebrow { font-family: 'JetBrains Mono', monospace; color: #FF9E4A; }
+        .s5 .eyebrow::before { background: #FF9E4A; }
+        .s5 h2 { font-family: 'Space Grotesk', sans-serif; font-weight: 600; color: #F2F5FB; letter-spacing: -0.02em; }
+        .s5 h2 em { font-style: normal; color: #FF9E4A; }
+        .s5 .lede { font-family: 'Inter'; color: #aeb7cb; }
+        .s5 .btn { background: #FF9E4A; color: #06080F; font-family: 'Inter'; }
+        .s5 .card { font-family: 'Inter'; background: #0E1320; border-color: #1f2738; color: #aeb7cb; }
+        .s5 .card b { font-family: 'Space Grotesk', sans-serif; color: #E8ECF5; }
+
+        /* ---------- 6 · Retro Terminal / Zine ---------- */
+        .s6 { background: #0B0B0B; }
+        .s6 .sbar { border-color: #232323; }
+        .s6 * { font-family: 'JetBrains Mono', monospace !important; }
+        .s6 .wm { font-weight: 700; font-size: 1.1rem; color: #D7D7CE; }
+        .s6 .nav { font-weight: 500; font-size: 0.78rem; color: #7d8a7d; }
+        .s6 .eyebrow { color: #00E08A; letter-spacing: 0.12em; }
+        .s6 .eyebrow::before { background: #00E08A; }
+        .s6 h2 { font-weight: 700; color: #E6E6DD; letter-spacing: -0.01em; line-height: 1.1; }
+        .s6 h2 em { font-style: normal; color: #00E08A; }
+        .s6 .lede { color: #b3b3a9; }
+        .s6 .btn { background: #00E08A; color: #0B0B0B; font-weight: 700; border-radius: 2px; }
+        .s6 .card { background: #131313; border-color: #2a2a2a; color: #b3b3a9; border-radius: 2px; }
+        .s6 .card b { color: #E6E6DD; }
+    </style>
+</head>
+
+<body>
+    <div class="page-head">
+        <h1>Design explorations — same hero, six directions</h1>
+        <p>Same content every time, so you're only judging the look. Tell me the number you like (or mix &amp; match — e.g. "type from 2, color from 5"). #1 is the current site.</p>
+    </div>
+
+    <!-- 1 -->
+    <div class="label"><span class="n">01</span><span class="t">Fraunces + Mulish</span><span class="d">— the current site (for reference)</span></div>
+    <div class="sample s1">
+        <div class="sbar"><span class="wm">✺ Workshop</span><span class="nav">How I Code · About</span></div>
+        <div class="sbody">
+            <p class="eyebrow">About</p>
+            <h2>Hi, I'm Brandon — <em>I make things.</em></h2>
+            <p class="lede">I live in San Diego, where I surf, make music, and create things.</p>
+            <div class="srow"><a class="btn">Read: How I Code</a><div class="card"><b>01 · Build for myself</b>I build what I'd actually want to use.</div></div>
+        </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="label"><span class="n">02</span><span class="t">Newsreader + Mulish</span><span class="d">— softer, more bookish serif · same warm vibe</span></div>
+    <div class="sample s2">
+        <div class="sbar"><span class="wm">✺ Workshop</span><span class="nav">How I Code · About</span></div>
+        <div class="sbody">
+            <p class="eyebrow">About</p>
+            <h2>Hi, I'm Brandon — <em>I make things.</em></h2>
+            <p class="lede">I live in San Diego, where I surf, make music, and create things.</p>
+            <div class="srow"><a class="btn">Read: How I Code</a><div class="card"><b>01 · Build for myself</b>I build what I'd actually want to use.</div></div>
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="label"><span class="n">03</span><span class="t">Spectral + Inter</span><span class="d">— refined, literary · warm but a touch sharper</span></div>
+    <div class="sample s3">
+        <div class="sbar"><span class="wm">✺ Workshop</span><span class="nav">How I Code · About</span></div>
+        <div class="sbody">
+            <p class="eyebrow">About</p>
+            <h2>Hi, I'm Brandon — <em>I make things.</em></h2>
+            <p class="lede">I live in San Diego, where I surf, make music, and create things.</p>
+            <div class="srow"><a class="btn">Read: How I Code</a><div class="card"><b>01 · Build for myself</b>I build what I'd actually want to use.</div></div>
+        </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="label"><span class="n">04</span><span class="t">Space Grotesk + Inter</span><span class="d">— Clean Modern Workshop · bright, bold, electric blue</span></div>
+    <div class="sample s4">
+        <div class="sbar"><span class="wm">✺ Workshop</span><span class="nav">How I Code · About</span></div>
+        <div class="sbody">
+            <p class="eyebrow">About</p>
+            <h2>Hi, I'm Brandon — <em>I make things.</em></h2>
+            <p class="lede">I live in San Diego, where I surf, make music, and create things.</p>
+            <div class="srow"><a class="btn">Read: How I Code</a><div class="card"><b>01 · Build for myself</b>I build what I'd actually want to use.</div></div>
+        </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="label"><span class="n">05</span><span class="t">Space Grotesk + Inter, dark</span><span class="d">— Cosmic / Local Astronaut · navy + sunrise amber</span></div>
+    <div class="sample s5">
+        <div class="sbar"><span class="wm">✺ Workshop</span><span class="nav">How I Code · About</span></div>
+        <div class="sbody">
+            <p class="eyebrow">About</p>
+            <h2>Hi, I'm Brandon — <em>I make things.</em></h2>
+            <p class="lede">I live in San Diego, where I surf, make music, and create things.</p>
+            <div class="srow"><a class="btn">Read: How I Code</a><div class="card"><b>01 · Build for myself</b>I build what I'd actually want to use.</div></div>
+        </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="label"><span class="n">06</span><span class="t">JetBrains Mono</span><span class="d">— Retro Terminal / Zine · raw, fast, indie-hacker</span></div>
+    <div class="sample s6">
+        <div class="sbar"><span class="wm">~/workshop</span><span class="nav">[how-i-code] [about]</span></div>
+        <div class="sbody">
+            <p class="eyebrow">About</p>
+            <h2>Hi, I'm Brandon — <em>I make things.</em></h2>
+            <p class="lede">I live in San Diego, where I surf, make music, and create things.</p>
+            <div class="srow"><a class="btn">Read: How I Code</a><div class="card"><b>01 · Build for myself</b>I build what I'd actually want to use.</div></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

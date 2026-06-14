@@ -1,38 +1,30 @@
-# Portfolio Website
+# Studio — Brandon Nelson
 
-Static portfolio site with individual project case studies and a lightweight asset pipeline.
+A small, personal site: an online studio where Brandon shares what he's building and a plain-English "How I Code" guide.
 
 Live site: https://localastronaut.github.io/portfolio/
 
 ## Structure
 
-- `index.html`: Landing page
-- `about.html`: About page
-- `projects.html`: Filterable projects listing
-- `projects/`: Individual project pages (moved here for organization)
-  - `project-*.html`
-- `css/`, `js/`, `img/`, `fonts/`: Static assets
-- `.gitignore`: Basic ignores for OS files and logs
+- `index.html` — Home / intro
+- `how-i-code.html` — The main guide: tools, software, AI, organization, sharing
+- `about.html` — Personal story
+- `assets/`
+  - `css/workshop.css` — the entire design system (warm "field notes" theme)
+  - `favicon.png`
+  - `img/` — site images (e.g. `brandon-charlie.jpg`)
+- `archive/` — the old portfolio (pages + assets), kept for reference and future rework
+- `sitemap.xml`, `robots.txt`
 
-## Local Development
+Fonts (Spectral + Inter) load from Google Fonts; there is no build step.
 
-Open `index.html` directly in a browser, or serve locally for cleaner routing and CORS behavior:
+## Local development
 
-Python 3: `python3 -m http.server 8000`
+Serve the folder locally:
 
-Then visit `http://localhost:8000`.
+`python3 -m http.server 8000` → visit `http://localhost:8000`
 
 ## Notes
 
-- Project pages are under `projects/` and all internal links updated.
-- Static assets live under `assets/` (`css/`, `js/`, `img/`, `fonts/`).
-- Added `assets/favicon.png` referenced across all pages.
-- Added `sitemap.xml` and `robots.txt` for SEO.
-
-## Tech
-
-- HTML, CSS, JavaScript (no build step required)
-
-## Contributions / Contact
-
-Open issues or reach out if you want help extending the site.
+- The live site is self-contained: three HTML pages + `assets/css/workshop.css` + Google Fonts. No jQuery, Bootstrap, or build tooling.
+- Everything from the previous portfolio template lives under `archive/` and is not linked from the live site.
