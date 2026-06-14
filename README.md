@@ -2,7 +2,7 @@
 
 A small, personal site: an online studio where Brandon shares what he's building and a plain-English "How I Code" guide.
 
-Live site: https://localastronaut.github.io/portfolio/
+Live site: https://localastronaut.github.io/studio/
 
 ## Structure
 

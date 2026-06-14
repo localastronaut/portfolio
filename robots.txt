@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://localastronaut.github.io/portfolio/sitemap.xml
+Sitemap: https://localastronaut.github.io/studio/sitemap.xml
